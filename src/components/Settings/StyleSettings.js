@@ -10,7 +10,6 @@ import { Fragment } from 'react';
 import { BDevice, MultiShadowControl } from '../../../../Components';
 import PanelColorControl from '../panel/PanelColorControl/PanelColorControl';
 import StyleSettingsOne from './StyleSettingsOne';
-import StyleSettingsTwo from './StyleSettingsTwo';
 const StyleSettings = ({ attributes, setAttributes }) => {
   const { image, preset} = attributes;
   return (
@@ -412,18 +411,10 @@ const StyleSettings = ({ attributes, setAttributes }) => {
           ]}
         />
       </PanelBody>
-      {preset === 1 && (
         <StyleSettingsOne
           attributes={attributes}
           setAttributes={setAttributes}
         />
-      )}
-      {preset === 2 && (
-        <StyleSettingsTwo
-          attributes={attributes}
-          setAttributes={setAttributes}
-        />
-      )}
     </Fragment>
   );
 };

@@ -35,7 +35,7 @@ const StyleSettingsOne = ({setAttributes, attributes}) => {
               isUnitSelectTabbable
               value={spotsone.width.desktop}
               min={1}
-              max={100}
+              max={700}
               onChange={(value) =>
                 setAttributes({
                   spotsone: {
@@ -51,7 +51,7 @@ const StyleSettingsOne = ({setAttributes, attributes}) => {
               style={{ width: '92px' }}
               units={['%']}
               min={1}
-              max={100}
+              max={700}
               isUnitSelectTabbable
               value={spotsone.width.tablet}
               onChange={(value) =>
@@ -69,7 +69,7 @@ const StyleSettingsOne = ({setAttributes, attributes}) => {
               style={{ width: '92px' }}
               units={['%']}
               min={1}
-              max={100}
+              max={700}
               isUnitSelectTabbable
               value={spotsone.width.mobile}
               onChange={(value) =>
@@ -108,7 +108,7 @@ const StyleSettingsOne = ({setAttributes, attributes}) => {
               isUnitSelectTabbable
               value={spotsone.height.desktop}
               min={1}
-              max={100}
+              max={700}
               onChange={(value) =>
                 setAttributes({
                   spotsone: {
@@ -124,7 +124,7 @@ const StyleSettingsOne = ({setAttributes, attributes}) => {
               style={{ width: '92px' }}
               units={['%']}
               min={1}
-              max={100}
+              max={700}
               isUnitSelectTabbable
               value={spotsone.height.tablet}
               onChange={(value) =>
@@ -142,7 +142,7 @@ const StyleSettingsOne = ({setAttributes, attributes}) => {
               style={{ width: '92px' }}
               units={['%']}
               min={1}
-              max={100}
+              max={700}
               isUnitSelectTabbable
               value={spotsone.height.mobile}
               onChange={(value) =>
@@ -181,7 +181,7 @@ const StyleSettingsOne = ({setAttributes, attributes}) => {
               isUnitSelectTabbable
               value={spotsone.iconSize.desktop}
               min={1}
-              max={100}
+              max={200}
               onChange={(value) =>
                 setAttributes({
                   spotsone: {
@@ -197,7 +197,7 @@ const StyleSettingsOne = ({setAttributes, attributes}) => {
               style={{ width: '92px' }}
               units={['%']}
               min={1}
-              max={100}
+              max={200}
               isUnitSelectTabbable
               value={spotsone.iconSize.tablet}
               onChange={(value) =>
@@ -215,7 +215,7 @@ const StyleSettingsOne = ({setAttributes, attributes}) => {
               style={{ width: '92px' }}
               units={['%']}
               min={1}
-              max={100}
+              max={200}
               isUnitSelectTabbable
               value={spotsone.iconSize.mobile}
               onChange={(value) =>
@@ -584,7 +584,7 @@ const StyleSettingsOne = ({setAttributes, attributes}) => {
           </Fragment>
         )}
       </PanelBody>
-      <PanelBody initialOpen={true} title={__('Tooltip', 'hotspot-block')}>
+      <PanelBody initialOpen={false} title={__('Tooltip', 'hotspot-block')}>
         <div
           style={{
             display: 'flex',
