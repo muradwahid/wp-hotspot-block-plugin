@@ -1,0 +1,20 @@
+$primaryColor: #4527a4;
+
+.prefixNowEditing {
+	outline: 2px solid $primaryColor;
+}
+
+.prefixInspectorInfo {
+	padding: 6px;
+
+	a {
+		text-decoration: none;
+		font-weight: bold;
+	}
+}
+.tox-statusbar__text-container.tox-statusbar__text-container-3-cols.tox-statusbar__text-container--flex-start{
+  display: none;
+}
+.tox-statusbar{
+  border-top: none !important;
+}

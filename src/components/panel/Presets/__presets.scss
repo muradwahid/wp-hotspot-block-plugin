@@ -1,0 +1,49 @@
+.presets-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+  .single-preset {
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    height: 90px;
+    width: 118px;
+    border-radius: 5px;
+
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+    .preset-tooltip-container {
+      position: absolute;
+      top: -36px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: none;
+      .preset-tooltip {
+        color: white;
+        position: relative !important;
+        background-color: black;
+        top: 10px;
+        padding: 0px 4px;
+        border-radius: 5px;
+        font-size: x-small;
+        i {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: -9px;
+          color: black;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .single-preset:hover {
+    .preset-tooltip-container {
+      display: block;
+    }
+  }
+}

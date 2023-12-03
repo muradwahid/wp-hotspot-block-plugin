@@ -1,0 +1,133 @@
+$primaryColor: #4527a4;
+
+// Common CSS
+html {
+  scroll-behavior: smooth;
+}
+
+// Dashicon
+.dashicons {
+  font-family: dashicons !important;
+}
+
+// Block Name
+.wp-block-prefix-block-name {
+  * {
+    box-sizing: border-box;
+  }
+
+  .prefixBlockName {
+    display: inline-block;
+  }
+
+  .icon {
+    font-style: inherit;
+  }
+  img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.resizable-draggable {
+  position: absolute;
+  cursor: move;
+}
+.mt-10{
+  margin-top: 10px;
+}
+#resizeHandle {
+  width: 10px;
+  height: 10px;
+  background-color: #333;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: nwse-resize;
+}
+
+.mce-statusbar.mce-container.mce-panel.mce-stack-layout-item.mce-last {
+  border-top: none;
+}
+.mce-branding.mce-widget.mce-label.mce-flow-layout-item.mce-last {
+  display: none;
+}
+.tooltip-top {
+  visibility: hidden;
+  opacity: 0;
+  bottom: 120%;
+}
+.tooltip-left {
+  visibility: hidden;
+  opacity: 0;
+  right: 120%;
+}
+.tooltip-right {
+  visibility: hidden;
+  opacity: 0;
+  left: 120%;
+}
+.tooltip-bottom {
+  visibility: hidden;
+  opacity: 0;
+  top: 120%;
+}
+.tooltip-topleft {
+  visibility: hidden;
+  opacity: 0;
+  bottom: 110%;
+  right: 95%;
+}
+.tooltip-topright {
+  visibility: hidden;
+  opacity: 0;
+  bottom: 110%;
+  left: 95%;
+}
+.tooltip-bottomleft {
+  visibility: hidden;
+  opacity: 0;
+  top: 110%;
+  right: 95%;
+}
+.tooltip-bottomright {
+  visibility: hidden;
+  opacity: 0;
+  top: 110%;
+  left: 95%;
+}
+
+.hotspotone:hover {
+  .tooltip-top {
+    visibility: visible;
+    opacity: 1;
+  }
+  .tooltip-left {
+    visibility: visible;
+    opacity: 1;
+  }
+  .tooltip-right {
+    visibility: visible;
+    opacity: 1;
+  }
+  .tooltip-bottom {
+    visibility: visible;
+    opacity: 1;
+  }
+  .tooltip-topleft {
+    visibility: visible;
+    opacity: 1;
+  }
+  .tooltip-topright {
+    visibility: visible;
+    opacity: 1;
+  }
+  .tooltip-bottomleft {
+    visibility: visible;
+    opacity: 1;
+  }
+  .tooltip-bottomright {
+    visibility: visible;
+    opacity: 1;
+  }
+}
