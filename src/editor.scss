@@ -12,9 +12,21 @@ $primaryColor: #4527a4;
 		font-weight: bold;
 	}
 }
+
 .tox-statusbar__text-container.tox-statusbar__text-container-3-cols.tox-statusbar__text-container--flex-start{
   display: none;
 }
 .tox-statusbar{
   border-top: none !important;
+}
+.components-base-control.components-input-control.components-number-control{
+	margin:0;
+}
+.components-base-control__label{
+	margin: 0 !important;
+}
+.bphb-hostpot-block{
+	.components-base-control__field{
+		margin: 0px !important;
+	}
 }

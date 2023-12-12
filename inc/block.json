@@ -4,7 +4,7 @@
   "title": "Hotspot Block",
   "description": "Description of Hotspot Block.",
   "category": "widgets",
-  "keywords": ["hotspot", "image", "tooltip"],
+  "keywords": ["hotspot block"],
   "textdomain": "hotspot-block",
   "attributes": {
     "align": {
@@ -17,12 +17,12 @@
     },
     "content": {
       "type": "string",
-      "default": "Lorem text should be replaced with real text"
+      "default": ""
     },
     "image": {
       "type": "object",
       "default": {
-        "url": "https://i.ibb.co/8Y5LPWv/placeholder.png",
+        "url": "",
         "height": { "desktop": "400px", "tablet": "400px", "mobile": "400px" },
         "device": "desktop",
         "heightDevice": "desktop",
@@ -45,103 +45,98 @@
           "top": "0px",
           "bottom": "0px"
         },
-        "paddingDevice":"desktop",
+        "paddingDevice": "desktop",
         "customSize": "full",
         "borderRadius": { "desktop": "3px", "tablet": "3px", "mobile": "3px" },
-        "borderRadiusDevice":"desktop",
-        "border":"none",
-        "borderColor":"#ccc",
-        "borderWidth":{"desktop":"0px","tablet":"0px","mobile":"0px"},
-        "borderWidthDevice":"desktop",
-        "boxShadow":[
-          {
-            "hOffset": "0px",
-            "vOffset": "0px",
-            "blur": "0px",
-            "spread": "0px",
-            "color": "",
-            "isInset": false
-          }
-        ]
+        "borderRadiusDevice": "desktop",
+        "border": "none",
+        "borderColor": "#ccc",
+        "borderWidth": { "desktop": "0px", "tablet": "0px", "mobile": "0px" },
+        "borderWidthDevice": "desktop",
+        "boxShadow":"0px 0px 0px 0px #707070"
       }
     },
-    "options":{
-      "type":"object",
-      "default":{
+    "options": {
+      "type": "object",
+      "default": {
         "speed": 400,
         "delay": 200
       }
     },
-    "preset":{
-      "type":"number",
-      "default":1
+    "preset": {
+      "type": "number",
+      "default": 1
     },
-    "spotsone":{
-      "type":"object",
-      "default":{
+    "spotsone": {
+      "type": "object",
+      "default": {
         "bgColor": "#8a2be2",
         "borderColor": "",
         "height": { "desktop": "40px", "tablet": "40px", "mobile": "40px" },
-        "heightDevice":"desktop",
+        "heightDevice": "desktop",
         "width": { "desktop": "40px", "tablet": "40px", "mobile": "40px" },
         "widthDevice": "desktop",
-        "padding":{ "desktop": {
-          "left": "0px",
-          "right": "0px",
-          "top": "0px",
-          "bottom": "0px"
-        }, "tablet": {
-          "left": "0px",
-          "right": "0px",
-          "top": "0px",
-          "bottom": "0px"
-        }, "mobile": {
-          "left": "0px",
-          "right": "0px",
-          "top": "0px",
-          "bottom": "0px"
-        } },
-        "paddingDevice":"desktop",
+        "padding": {
+          "desktop": {
+            "left": "0px",
+            "right": "0px",
+            "top": "0px",
+            "bottom": "0px"
+          },
+          "tablet": {
+            "left": "0px",
+            "right": "0px",
+            "top": "0px",
+            "bottom": "0px"
+          },
+          "mobile": {
+            "left": "0px",
+            "right": "0px",
+            "top": "0px",
+            "bottom": "0px"
+          }
+        },
+        "paddingDevice": "desktop",
         "borderRadius": {
-          "desktop":{
+          "desktop": {
             "left": "50px",
             "right": "50px",
             "top": "50px",
             "bottom": "50px"
           },
-          "tablet":{
+          "tablet": {
             "left": "50px",
             "right": "50px",
             "top": "50px",
             "bottom": "50px"
           },
-          "mobile":{
+          "mobile": {
             "left": "50px",
             "right": "50px",
             "top": "50px",
             "bottom": "50px"
           }
         },
-        "borderRadiusDevice":"desktop",
+        "borderRadiusDevice": "desktop",
         "borderWidth": {
           "desktop": "0px",
           "tablet": "0px",
-          "mobile":"0px"
+          "mobile": "0px"
         },
-        "borderWidthDevice":"desktop",
-        "iconColor": "#000",
-        "iconSize":{"desktop":"12px","tablet":"12px","mobile":"12px"},
+        "borderWidthDevice": "desktop",
+        "iconColor": "#fff",
+        "iconSize": { "desktop": "12px", "tablet": "12px", "mobile": "12px" },
         "iconSizeDevice": "desktop",
-        "borderType":"none",
-        "hover":"normal",
-        "hoverColor":{"icon":"","bg":"","border":""}
+        "borderType": "none",
+        "hover": "normal",
+        "hoverColor": { "icon": "#fff", "bg": "", "border": "" }
       }
     },
-    "tooltipone":{
-      "type":"object",
-      "default":{
+    "tooltipone": {
+      "type": "object",
+      "default": {
         "width": "200px",
-        "padding":{
+        "padding": {
           "desktop": {
             "left": "5px",
             "right": "5px",
@@ -161,8 +156,8 @@
             "bottom": "5px"
           }
         },
-        "paddingDevice":"desktop",
-        "borderRadius":{
+        "paddingDevice": "desktop",
+        "borderRadius": {
           "desktop": {
             "left": "3px",
             "right": "3px",
@@ -182,48 +177,39 @@
             "bottom": "3px"
           }
         },
-        "borderRadiusDevice":"desktop",
-        "borderColor":"#fff",
-        "borderWidth":"0px",
+        "borderRadiusDevice": "desktop",
+        "borderColor": "#fff",
+        "borderWidth": "0px",
         "textColor": "#fff",
         "bgColor": "#8a2be2",
-        "boxShadow": [
-          {
-            "hOffset": "0px",
-            "vOffset": "0px",
-            "blur": "0px",
-            "spread": "0px",
-            "color": "",
-            "isInset":false
-          }
-        ]
+        "boxShadow": "0px 0px 0px 0px #707070"
       }
     },
     "themeone": {
       "type": "array",
       "default": [
         {
-          "toggle":false,
           "borderColor": "",
           "bgColor": "",
           "spotsSize": "",
           "isDragging": false,
           "option": "spot",
           "spotOption": 1,
-          "spotText":"+",
-          "icon":"",
-          "image":"",
-          "tooltip":"<p>Tooltip contents</p>",
-          "tooltipPosition":"left",
+          "spotText": "+",
+          "icon": "",
+          "image": "",
+          "tooltip": "<p>Tooltip contents</p>",
+          "tooltipPosition": "left",
           "position": {
             "x": 0,
             "y": 0
           },
-          "iconColor":"",
-          "iconSize":"12px"
+          "iconColor": "",
+          "iconSize": "12px",
+          "spotLink":"",
+          "newWindow":false
         },
         {
-          "toggle": false,
           "borderColor": "",
           "bgColor": "",
           "spotsSize": "",
@@ -233,13 +219,15 @@
           "icon": "",
           "image": "",
           "tooltip": "<p>Tooltip contents</p>",
-          "tooltipPosition":"left",
+          "tooltipPosition": "left",
           "position": {
             "x": 100,
             "y": 100
           },
           "iconColor": "",
-          "iconSize": "12px"
+          "iconSize": "12px",
+          "spotLink":"",
+          "newWindow":false
         }
       ]
     }

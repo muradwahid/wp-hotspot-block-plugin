@@ -5,10 +5,10 @@ import './editor.scss';
 import { blockIcon } from './utils/icons';
 
 registerBlockType(metadata, {
-  icon: blockIcon,
+	icon: blockIcon,
 
-  // Build in Functions
-  edit: Edit,
+	// Build in Functions
+	edit:Edit,
 
-  save: () => null,
+	save: () =>null,
 });

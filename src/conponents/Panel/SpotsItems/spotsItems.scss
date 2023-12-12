@@ -1,0 +1,29 @@
+.spots-items-container {
+  border: 1px solid #ccc;
+  margin-bottom:15px;
+  .spots-items-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    p{
+      margin: 0;
+    }
+    .spots-items-header-icons {
+      display: flex;
+      align-items: center;
+      .header-icon{
+        padding:9px 15px;
+        border-left: 1px solid #ccc;
+      }
+      .header-icon:hover{
+        background-color: #ccc;
+      }
+      
+    }
+  }
+  .spots-items-body{
+    padding :10px
+  }
+}
