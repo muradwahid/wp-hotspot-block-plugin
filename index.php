@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Hotspot Block
- * Description: Description of the Hotspot Block.
+ * Description: Hotspot Block allows you to add interactive hotspots to your images.
  * Version: 1.0.0
  * Author: bPlugins LLC
  * Author URI: http://bplugins.com

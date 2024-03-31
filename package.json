@@ -1,7 +1,7 @@
 {
   "name": "hotspot-block",
   "version": "1.0.0",
-  "description": "Discription of Hotspot Block",
+  "description": "Hotspot Block allows you to add interactive hotspots to your images.",
   "main": "index.js",
   "scripts": {
     "lint": "eslint src",
@@ -22,7 +22,7 @@
     "@dnd-kit/sortable": "^8.0.0",
     "@dnd-kit/utilities": "^3.2.2",
     "@tinymce/tinymce-react": "^4.3.2",
-    "immer": "^10.0.3",
+    "immer": "^10.0.4",
     "react-icons": "^4.11.0",
     "react-inlinesvg": "^4.1.0",
     "swiper": "^10.3.1"

@@ -6,7 +6,8 @@ import {
   __experimentalUnitControl as UnitControl,
 } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
+import { updateData } from '../../utils/functions';
 import Device from '../Panel/Device/Device';
 import IncludeExClude from '../Panel/IncludeExclude/IncludeExclude';
 import PanelColorControl from '../Panel/PanelColorControl/PanelColorControl';
@@ -14,287 +15,104 @@ import PanelShadow from '../Panel/PanelShadow/PanelShadow';
 
 const StyleSettingsOne = ({ setAttributes, attributes }) => {
   const { spotsone, tooltipone } = attributes;
+  const [device, setDevice] = useState("desktop");
   return (
     <Fragment>
-      <PanelBody initialOpen={false} title={__('Spots', 'hotspot-block')}>
+      <PanelBody initialOpen={false} title={__('Spots', 'b-blocks')}>
         <PanelRow>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <span>Width</span>
+            <span>{__("Width", "b-blocks")}</span>
             <Device
-              device={spotsone.widthDevice}
-              onChange={(value) =>
-                setAttributes({
-                  spotsone: { ...spotsone, widthDevice: value },
-                })
-              }
+              device={device}
+              onChange={(value) => setDevice(value)}
             />
           </div>
-          {spotsone.widthDevice === 'desktop' && (
-            <UnitControl
-              style={{ width: '92px' }}
-              units={['%']}
-              isUnitSelectTabbable
-              value={spotsone.width.desktop}
-              min={1}
-              max={700}
-              onChange={(value) =>
-                setAttributes({
-                  spotsone: {
-                    ...spotsone,
-                    width: { ...spotsone.width, desktop: value },
-                  },
-                })
-              }
-            />
-          )}
-          {spotsone.widthDevice === 'tablet' && (
-            <UnitControl
-              style={{ width: '92px' }}
-              units={['%']}
-              min={1}
-              max={700}
-              isUnitSelectTabbable
-              value={spotsone.width.tablet}
-              onChange={(value) =>
-                setAttributes({
-                  spotsone: {
-                    ...spotsone,
-                    width: { ...spotsone.width, tablet: value },
-                  },
-                })
-              }
-            />
-          )}
-          {spotsone.widthDevice === 'mobile' && (
-            <UnitControl
-              style={{ width: '92px' }}
-              units={['%']}
-              min={1}
-              max={700}
-              isUnitSelectTabbable
-              value={spotsone.width.mobile}
-              onChange={(value) =>
-                setAttributes({
-                  spotsone: {
-                    ...spotsone,
-                    width: { ...spotsone.width, mobile: value },
-                  },
-                })
-              }
-            />
-          )}
+          <UnitControl
+            style={{ width: '92px' }}
+            units={['%']}
+            isUnitSelectTabbable
+            value={spotsone.width[device]}
+            min={1}
+            max={700}
+            onChange={(value) =>
+              setAttributes({
+                spotsone: updateData(spotsone, value, "width", device)
+              })
+            }
+          />
         </PanelRow>
         <PanelRow>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <span>Height</span>
+            <span>{__("Height", "b-blocks")}</span>
             <Device
-              device={spotsone.heightDevice}
-              onChange={(value) =>
-                setAttributes({
-                  spotsone: { ...spotsone, heightDevice: value },
-                })
-              }
+              device={device}
+              onChange={(value) => setDevice(value)}
             />
           </div>
-          {spotsone.heightDevice === 'desktop' && (
-            <UnitControl
-              style={{ width: '92px' }}
-              units={['%']}
-              isUnitSelectTabbable
-              value={spotsone.height.desktop}
-              min={1}
-              max={700}
-              onChange={(value) =>
-                setAttributes({
-                  spotsone: {
-                    ...spotsone,
-                    height: { ...spotsone.height, desktop: value },
-                  },
-                })
-              }
-            />
-          )}
-          {spotsone.heightDevice === 'tablet' && (
-            <UnitControl
-              style={{ width: '92px' }}
-              units={['%']}
-              min={1}
-              max={700}
-              isUnitSelectTabbable
-              value={spotsone.height.tablet}
-              onChange={(value) =>
-                setAttributes({
-                  spotsone: {
-                    ...spotsone,
-                    height: { ...spotsone.height, tablet: value },
-                  },
-                })
-              }
-            />
-          )}
-          {spotsone.heightDevice === 'mobile' && (
-            <UnitControl
-              style={{ width: '92px' }}
-              units={['%']}
-              min={1}
-              max={700}
-              isUnitSelectTabbable
-              value={spotsone.height.mobile}
-              onChange={(value) =>
-                setAttributes({
-                  spotsone: {
-                    ...spotsone,
-                    height: { ...spotsone.height, mobile: value },
-                  },
-                })
-              }
-            />
-          )}
+          <UnitControl
+            style={{ width: '92px' }}
+            units={['%']}
+            isUnitSelectTabbable
+            value={spotsone.height[device]}
+            min={1}
+            max={700}
+            onChange={(value) =>
+              setAttributes({
+                spotsone: updateData(spotsone, value, "height", device)
+              })
+            }
+          />
         </PanelRow>
         <PanelRow>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <span>Icon Size</span>
+            <span>{__("Icon Size", "b-blocks")}</span>
             <Device
-              device={spotsone.iconSizeDevice}
-              onChange={(value) =>
-                setAttributes({
-                  spotsone: { ...spotsone, iconSizeDevice: value },
-                })
-              }
+              device={device}
+              onChange={(value) => setDevice(value)}
             />
           </div>
-          {spotsone.iconSizeDevice === 'desktop' && (
-            <UnitControl
-              style={{ width: '92px' }}
-              units={['%']}
-              isUnitSelectTabbable
-              value={spotsone.iconSize.desktop}
-              min={1}
-              max={200}
-              onChange={(value) =>
-                setAttributes({
-                  spotsone: {
-                    ...spotsone,
-                    iconSize: { ...spotsone.iconSize, desktop: value },
-                  },
-                })
-              }
-            />
-          )}
-          {spotsone.iconSizeDevice === 'tablet' && (
-            <UnitControl
-              style={{ width: '92px' }}
-              units={['%']}
-              min={1}
-              max={200}
-              isUnitSelectTabbable
-              value={spotsone.iconSize.tablet}
-              onChange={(value) =>
-                setAttributes({
-                  spotsone: {
-                    ...spotsone,
-                    iconSize: { ...spotsone.iconSize, tablet: value },
-                  },
-                })
-              }
-            />
-          )}
-          {spotsone.iconSizeDevice === 'mobile' && (
-            <UnitControl
-              style={{ width: '92px' }}
-              units={['%']}
-              min={1}
-              max={200}
-              isUnitSelectTabbable
-              value={spotsone.iconSize.mobile}
-              onChange={(value) =>
-                setAttributes({
-                  spotsone: {
-                    ...spotsone,
-                    iconSize: { ...spotsone.iconSize, mobile: value },
-                  },
-                })
-              }
-            />
-          )}
+          <UnitControl
+            style={{ width: '92px' }}
+            units={['%']}
+            isUnitSelectTabbable
+            value={spotsone.iconSize[device]}
+            min={1}
+            max={200}
+            onChange={(value) =>
+              setAttributes({
+                spotsone: updateData(spotsone, value, "iconSize", device)
+              })
+            }
+          />
         </PanelRow>
 
         <div style={{ position: 'relative', marginTop: '20px' }}>
           <Device
             style={{ position: 'absolute', left: '60px' }}
-            device={spotsone.paddingDevice}
+            device={device}
+            onChange={(value) => setDevice(value)}
+          />
+          <BoxControl
+            label={__("Padding", "b-blocks")}
+            values={spotsone.padding[device]}
+            units={['px']}
+            resetValues={{
+              left: '0px',
+              right: '0px',
+              top: '0px',
+              bottom: '0px',
+            }}
             onChange={(value) =>
-              setAttributes({ spotsone: { ...spotsone, paddingDevice: value } })
+              setAttributes({
+                spotsone: updateData(spotsone, value, "padding", device)
+              })
             }
           />
-          {spotsone.paddingDevice === 'desktop' && (
-            <BoxControl
-              label="Padding"
-              values={spotsone.padding.desktop}
-              units={['px']}
-              resetValues={{
-                left: '0px',
-                right: '0px',
-                top: '0px',
-                bottom: '0px',
-              }}
-              onChange={(value) =>
-                setAttributes({
-                  spotsone: {
-                    ...spotsone,
-                    padding: { ...spotsone.padding, desktop: value },
-                  },
-                })
-              }
-            />
-          )}
-          {spotsone.paddingDevice === 'tablet' && (
-            <BoxControl
-              label="Padding"
-              values={spotsone.padding.tablet}
-              units={['px']}
-              resetValues={{
-                left: '0px',
-                right: '0px',
-                top: '0px',
-                bottom: '0px',
-              }}
-              onChange={(value) =>
-                setAttributes({
-                  spotsone: {
-                    ...spotsone,
-                    padding: { ...spotsone.padding, tablet: value },
-                  },
-                })
-              }
-            />
-          )}
-          {spotsone.paddingDevice === 'mobile' && (
-            <BoxControl
-              label="Padding"
-              values={spotsone.padding.mobile}
-              units={['px']}
-              resetValues={{
-                left: '0px',
-                right: '0px',
-                top: '0px',
-                bottom: '0px',
-              }}
-              onChange={(value) =>
-                setAttributes({
-                  spotsone: {
-                    ...spotsone,
-                    padding: { ...spotsone.padding, mobile: value },
-                  },
-                })
-              }
-            />
-          )}
         </div>
 
         <div className="mt-10">
           <PanelRow>
-            <span>Border Type</span>
+            <span>{__("Border Type", "b-blocks")}</span>
             <SelectControl
               value={spotsone.borderType}
               options={[
@@ -306,7 +124,7 @@ const StyleSettingsOne = ({ setAttributes, attributes }) => {
                 { label: 'Groove', value: 'groove' },
               ]}
               onChange={(value) =>
-                setAttributes({ spotsone: { ...spotsone, borderType: value } })
+                setAttributes({ spotsone: updateData(spotsone, value, "borderType") })
               }
             />
           </PanelRow>
@@ -324,76 +142,29 @@ const StyleSettingsOne = ({ setAttributes, attributes }) => {
               <div
                 style={{ display: 'flex', alignItems: 'center', gap: '10px' }}
               >
-                <span>Border Width</span>
+                <span>{__("Border Width", "b-blocks")}</span>
                 <Device
-                  device={spotsone.borderWidthDevice}
-                  onChange={(value) =>
-                    setAttributes({
-                      spotsone: { ...spotsone, borderWidthDevice: value },
-                    })
-                  }
+                  device={device}
+                  onChange={(value) => setDevice(value)}
                 />
               </div>
-              {spotsone.borderWidthDevice === 'desktop' && (
-                <UnitControl
-                  style={{ width: '60px' }}
-                  units={['%']}
-                  isUnitSelectTabbable
-                  value={spotsone.borderWidth.desktop}
-                  min={0}
-                  max={50}
-                  onChange={(value) =>
-                    setAttributes({
-                      spotsone: {
-                        ...spotsone,
-                        borderWidth: {
-                          ...spotsone.borderWidth,
-                          desktop: value,
-                        },
-                      },
-                    })
-                  }
-                />
-              )}
-              {spotsone.borderWidthDevice === 'tablet' && (
-                <UnitControl
-                  style={{ width: '60px' }}
-                  units={['%']}
-                  min={0}
-                  max={50}
-                  isUnitSelectTabbable
-                  value={spotsone.borderWidth.tablet}
-                  onChange={(value) =>
-                    setAttributes({
-                      spotsone: {
-                        ...spotsone,
-                        borderWidth: { ...spotsone.borderWidth, tablet: value },
-                      },
-                    })
-                  }
-                />
-              )}
-              {spotsone.borderWidthDevice === 'mobile' && (
-                <UnitControl
-                  style={{ width: '60px' }}
-                  units={['%']}
-                  min={0}
-                  max={50}
-                  isUnitSelectTabbable
-                  value={spotsone.borderWidth.mobile}
-                  onChange={(value) =>
-                    setAttributes({
-                      spotsone: {
-                        ...spotsone,
-                        borderWidth: { ...spotsone.borderWidth, mobile: value },
-                      },
-                    })
-                  }
-                />
-              )}
+              <UnitControl
+                style={{ width: '60px' }}
+                units={['%']}
+                isUnitSelectTabbable
+                value={spotsone.borderWidth[device]}
+                min={0}
+                max={50}
+                onChange={(value) =>
+                  setAttributes({
+                    spotsone: updateData(spotsone, value, "borderWidth", device)
+                  })
+                }
+              />
+
             </div>
             <PanelColorControl
-              label="Border Color"
+              label={__("Border Color", "b-blocks")}
               value={spotsone.borderColor}
               colors={[
                 { name: 'red', color: '#f00' },
@@ -410,76 +181,25 @@ const StyleSettingsOne = ({ setAttributes, attributes }) => {
         <div style={{ position: 'relative', marginTop: '20px' }}>
           <Device
             style={{ position: 'absolute', left: '90px' }}
-            device={spotsone.borderRadiusDevice}
+            device={device}
+            onChange={(value) => setDevice(value)}
+          />
+          <BoxControl
+            label={__("Border Radius", "b-blocks")}
+            values={spotsone.borderRadius[device]}
+            units={['px']}
+            resetValues={{
+              left: '0px',
+              right: '0px',
+              top: '0px',
+              bottom: '0px',
+            }}
             onChange={(value) =>
               setAttributes({
-                spotsone: { ...spotsone, borderRadiusDevice: value },
+                spotsone: updateData(spotsone, value, "borderRadius", device)
               })
             }
           />
-          {spotsone.borderRadiusDevice === 'desktop' && (
-            <BoxControl
-              label="Border Radius"
-              values={spotsone.borderRadius.desktop}
-              units={['px']}
-              resetValues={{
-                left: '0px',
-                right: '0px',
-                top: '0px',
-                bottom: '0px',
-              }}
-              onChange={(value) =>
-                setAttributes({
-                  spotsone: {
-                    ...spotsone,
-                    borderRadius: { ...spotsone.borderRadius, desktop: value },
-                  },
-                })
-              }
-            />
-          )}
-          {spotsone.borderRadiusDevice === 'tablet' && (
-            <BoxControl
-              label="Border Radius"
-              values={spotsone.borderRadius.tablet}
-              units={['px']}
-              resetValues={{
-                left: '0px',
-                right: '0px',
-                top: '0px',
-                bottom: '0px',
-              }}
-              onChange={(value) =>
-                setAttributes({
-                  spotsone: {
-                    ...spotsone,
-                    borderRadius: { ...spotsone.borderRadius, tablet: value },
-                  },
-                })
-              }
-            />
-          )}
-          {spotsone.borderRadiusDevice === 'mobile' && (
-            <BoxControl
-              label="Border Radius"
-              values={spotsone.borderRadius.mobile}
-              units={['px']}
-              resetValues={{
-                left: '0px',
-                right: '0px',
-                top: '0px',
-                bottom: '0px',
-              }}
-              onChange={(value) =>
-                setAttributes({
-                  spotsone: {
-                    ...spotsone,
-                    borderRadius: { ...spotsone.borderRadius, mobile: value },
-                  },
-                })
-              }
-            />
-          )}
         </div>
 
         <IncludeExClude
@@ -573,7 +293,8 @@ const StyleSettingsOne = ({ setAttributes, attributes }) => {
           </Fragment>
         )}
       </PanelBody>
-      <PanelBody initialOpen={false} title={__('Tooltip', 'hotspot-block')}>
+
+      <PanelBody initialOpen={false} title={__('Tooltip', 'b-blocks')}>
         <div
           style={{
             display: 'flex',
@@ -581,10 +302,10 @@ const StyleSettingsOne = ({ setAttributes, attributes }) => {
             justifyContent: 'space-between',
           }}
         >
-          <span>Width</span>
+          <span>{__("Width","b-blocks")}</span>
           <UnitControl
             style={{ width: '92px' }}
-            units={['px']}
+            units={[{label:"px",value:"px"}]}
             isUnitSelectTabbable
             value={tooltipone.width}
             min={1}
@@ -602,18 +323,13 @@ const StyleSettingsOne = ({ setAttributes, attributes }) => {
         <div style={{ position: 'relative', marginTop: '20px' }}>
           <Device
             style={{ position: 'absolute', left: '60px' }}
-            device={tooltipone.paddingDevice}
-            onChange={(value) =>
-              setAttributes({
-                tooltipone: { ...tooltipone, paddingDevice: value },
-              })
-            }
+            device={device}
+            onChange={(value) =>setDevice(value)}
           />
-          {tooltipone.paddingDevice === 'desktop' && (
             <BoxControl
-              label="Padding"
-              values={tooltipone.padding.desktop}
-              units={['px']}
+              label={__("Padding","b-blocks")}
+              values={tooltipone.padding[device]}
+              units={[{ label: "px", value: "px" }]}
               resetValues={{
                 left: '0px',
                 right: '0px',
@@ -622,73 +338,22 @@ const StyleSettingsOne = ({ setAttributes, attributes }) => {
               }}
               onChange={(value) =>
                 setAttributes({
-                  tooltipone: {
-                    ...tooltipone,
-                    padding: { ...tooltipone.padding, desktop: value },
-                  },
+                  tooltipone: updateData(tooltipone,value,"padding",device)
                 })
               }
             />
-          )}
-          {tooltipone.paddingDevice === 'tablet' && (
-            <BoxControl
-              label="Padding"
-              values={tooltipone.padding.tablet}
-              units={['px']}
-              resetValues={{
-                left: '0px',
-                right: '0px',
-                top: '0px',
-                bottom: '0px',
-              }}
-              onChange={(value) =>
-                setAttributes({
-                  tooltipone: {
-                    ...tooltipone,
-                    padding: { ...tooltipone.padding, tablet: value },
-                  },
-                })
-              }
-            />
-          )}
-          {tooltipone.paddingDevice === 'mobile' && (
-            <BoxControl
-              label="Padding"
-              values={tooltipone.padding.mobile}
-              units={['px']}
-              resetValues={{
-                left: '0px',
-                right: '0px',
-                top: '0px',
-                bottom: '0px',
-              }}
-              onChange={(value) =>
-                setAttributes({
-                  tooltipone: {
-                    ...tooltipone,
-                    padding: { ...tooltipone.padding, mobile: value },
-                  },
-                })
-              }
-            />
-          )}
         </div>
 
         <div style={{ position: 'relative', marginTop: '20px' }}>
           <Device
             style={{ position: 'absolute', left: '90px' }}
-            device={tooltipone.borderRadiusDevice}
-            onChange={(value) =>
-              setAttributes({
-                tooltipone: { ...tooltipone, borderRadiusDevice: value },
-              })
-            }
+            device={device}
+            onChange={(value) =>setDevice(value)}
           />
-          {tooltipone.borderRadiusDevice === 'desktop' && (
             <BoxControl
-              label="Border Radius"
-              values={tooltipone.borderRadius.desktop}
-              units={['px']}
+              label={__("Border Radius",'b-blocks')}
+              values={tooltipone.borderRadius[device]}
+              units={[{ label: "px", value: "px" }]}
               resetValues={{
                 left: '0px',
                 right: '0px',
@@ -697,63 +362,14 @@ const StyleSettingsOne = ({ setAttributes, attributes }) => {
               }}
               onChange={(value) =>
                 setAttributes({
-                  tooltipone: {
-                    ...tooltipone,
-                    borderRadius: {
-                      ...tooltipone.borderRadius,
-                      desktop: value,
-                    },
-                  },
+                  tooltipone: updateData(tooltipone,value,"borderRadius",device)
                 })
               }
             />
-          )}
-          {tooltipone.borderRadiusDevice === 'tablet' && (
-            <BoxControl
-              label="Border Radius"
-              values={tooltipone.borderRadius.tablet}
-              units={['px']}
-              resetValues={{
-                left: '0px',
-                right: '0px',
-                top: '0px',
-                bottom: '0px',
-              }}
-              onChange={(value) =>
-                setAttributes({
-                  tooltipone: {
-                    ...tooltipone,
-                    borderRadius: { ...tooltipone.borderRadius, tablet: value },
-                  },
-                })
-              }
-            />
-          )}
-          {tooltipone.borderRadiusDevice === 'mobile' && (
-            <BoxControl
-              label="Border Radius"
-              values={tooltipone.borderRadius.mobile}
-              units={['px']}
-              resetValues={{
-                left: '0px',
-                right: '0px',
-                top: '0px',
-                bottom: '0px',
-              }}
-              onChange={(value) =>
-                setAttributes({
-                  tooltipone: {
-                    ...tooltipone,
-                    borderRadius: { ...tooltipone.borderRadius, mobile: value },
-                  },
-                })
-              }
-            />
-          )}
         </div>
 
         <PanelColorControl
-          label="Text Color"
+          label={__("Text Color","b-blocks")}
           value={tooltipone.textColor}
           colors={[
             { name: 'red', color: '#f00' },
@@ -765,7 +381,7 @@ const StyleSettingsOne = ({ setAttributes, attributes }) => {
           }
         />
         <PanelColorControl
-          label="Background Color"
+          label={__("Background Color","b-blocks")}
           value={tooltipone.bgColor}
           colors={[
             { name: 'red', color: '#f00' },
@@ -778,7 +394,7 @@ const StyleSettingsOne = ({ setAttributes, attributes }) => {
         />
 
         <PanelShadow
-          label="Box Shadow"
+          label={__("Box Shadow","b-blocks")}
           value={tooltipone.boxShadow}
           onChange={(value) =>
             setAttributes({ tooltipone: { ...tooltipone, boxShadow: value } })

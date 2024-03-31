@@ -1,3 +1,5 @@
+import { getBoxCss } from "../../utils/functions";
+
 const HotspotStyle = ({ attributes }) => {
   const { image, options, spotsone, tooltipone, cId } = attributes;
   return (
@@ -6,10 +8,7 @@ const HotspotStyle = ({ attributes }) => {
       #bphb-hotspot-block-${cId} .hotspot-image-wrapper{
         box-sizing: border-box;
         position:relative;
-        padding-left:${image.paddingDesktop.left};
-        padding-right:${image.paddingDesktop.right};
-        padding-top:${image.paddingDesktop.top};            
-        padding-bottom:${image.paddingDesktop.bottom};
+        padding:${getBoxCss(image.padding.desktop)};
         border:${image.borderWidth.desktop} ${image.border} ${image.borderColor};
         border-radius:${image.borderRadius.desktop};
         box-shadow: ${image.boxShadow};
@@ -251,7 +250,6 @@ const HotspotStyle = ({ attributes }) => {
             color: ${tooltipone.textColor};
             margin:0px;
         }
-
       @keyframes circle {
         0%{
           box-shadow: 0px 0px 0px 0px #00000027;
@@ -268,120 +266,6 @@ const HotspotStyle = ({ attributes }) => {
           height: ${image.height.desktop};
           object-fit:cover;
         }
-
-
-      @media screen and (min-width: 1024px) {
-        #bphb-hotspot-block-${cId} .hotspot-image-wrapper{
-          padding-left:${image.paddingDesktop.left};
-          padding-right:${image.paddingDesktop.right};
-          padding-top:${image.paddingDesktop.top};            
-          padding-bottom:${image.paddingDesktop.bottom};
-          border:${image.borderWidth.desktop} ${image.border} ${image.borderColor};
-          border-radius:${image.borderRadius.desktop};
-          }
-      #bphb-hotspot-block-${cId} .hotspotone.circle{
-        height:${spotsone.height.desktop};
-        width: ${spotsone.width.desktop};
-        border-radius:${spotsone.borderRadius.desktop.top} ${spotsone.borderRadius.desktop.left} ${spotsone.borderRadius.desktop.bottom} ${spotsone.borderRadius.desktop.right};
-        padding-left:${spotsone.padding.desktop.left};
-        padding-right:${spotsone.padding.desktop.right};
-        padding-top:${spotsone.padding.desktop.top};
-        padding-bottom:${spotsone.padding.desktop.bottom};
-        border:${spotsone.borderWidth.desktop} ${spotsone.borderType} ${spotsone.borderColor};
-      }
-
-      #bphb-hotspot-block-${cId} .hotspotone.circle>span{
-        font-size:${spotsone.iconSize.desktop};
-      }
-      #bphb-hotspot-block-${cId} .hotspotone.two{
-        height:${spotsone.height.desktop};
-        width: ${spotsone.width.desktop};
-        border-radius:${spotsone.borderRadius.desktop.top} ${spotsone.borderRadius.desktop.left} ${spotsone.borderRadius.desktop.bottom} ${spotsone.borderRadius.desktop.right};
-        padding-left:${spotsone.padding.desktop.left};
-        padding-right:${spotsone.padding.desktop.right};
-        padding-top:${spotsone.padding.desktop.top};
-        padding-bottom:${spotsone.padding.desktop.bottom};
-        border:${spotsone.borderWidth.desktop} ${spotsone.borderType} ${spotsone.borderColor};
-      }
-      #bphb-hotspot-block-${cId} .hotspotone.two>span{
-        font-size:${spotsone.iconSize.desktop};
-      }
-      #bphb-hotspot-block-${cId} .hotspotone.three{
-        height:${spotsone.height.desktop};
-        width: ${spotsone.width.desktop};
-        border-radius:${spotsone.borderRadius.desktop.top} ${spotsone.borderRadius.desktop.left} ${spotsone.borderRadius.desktop.bottom} ${spotsone.borderRadius.desktop.right};
-        padding-left:${spotsone.padding.desktop.left};
-        padding-right:${spotsone.padding.desktop.right};
-        padding-top:${spotsone.padding.desktop.top};
-        padding-bottom:${spotsone.padding.desktop.bottom};
-      }
-      #bphb-hotspot-block-${cId} .hotspotone.three :where(span,img){
-        font-size:${spotsone.iconSize.desktop};
-        border:${spotsone.borderWidth.desktop} ${spotsone.borderType} ${spotsone.borderColor};
-      }
-      #bphb-hotspot-block-${cId} .hotspotone.fourth{
-        height:${spotsone.height.desktop};
-        width: ${spotsone.width.desktop};
-        border-radius:${spotsone.borderRadius.desktop.top} ${spotsone.borderRadius.desktop.left} ${spotsone.borderRadius.desktop.bottom} ${spotsone.borderRadius.desktop.right};
-        padding-left:${spotsone.padding.desktop.left};
-        padding-right:${spotsone.padding.desktop.right};
-        padding-top:${spotsone.padding.desktop.top};
-        padding-bottom:${spotsone.padding.desktop.bottom};
-        border:${spotsone.borderWidth.desktop} ${spotsone.borderType} ${spotsone.borderColor};
-      }
-      #bphb-hotspot-block-${cId} .hotspotone.fourth>span{
-        font-size:${spotsone.iconSize.desktop};
-      }
-      #bphb-hotspot-block-${cId} .hotspotone.fifth{
-        height:${spotsone.height.desktop};
-        width: ${spotsone.width.desktop};
-        border-radius:${spotsone.borderRadius.desktop.top} ${spotsone.borderRadius.desktop.left} ${spotsone.borderRadius.desktop.bottom} ${spotsone.borderRadius.desktop.right};
-        padding-left:${spotsone.padding.desktop.left};
-        padding-right:${spotsone.padding.desktop.right};
-        padding-top:${spotsone.padding.desktop.top};
-        padding-bottom:${spotsone.padding.desktop.bottom};
-        border:${spotsone.borderWidth.desktop} ${spotsone.borderType} ${spotsone.borderColor};
-      }
-      #bphb-hotspot-block-${cId} .hotspotone.fifth>span{
-        font-size:${spotsone.iconSize.desktop};
-      }
-      #bphb-hotspot-block-${cId} .tooltip-reader.one{
-        padding-left:${tooltipone.padding.desktop.left};
-        padding-right:${tooltipone.padding.desktop.right};
-        padding-top:${tooltipone.padding.desktop.top};
-        padding-bottom:${tooltipone.padding.desktop.bottom};
-        border-radius:${tooltipone.borderRadius.desktop.top} ${tooltipone.borderRadius.desktop.left} ${tooltipone.borderRadius.desktop.bottom} ${tooltipone.borderRadius.desktop.right};
-      }
-      #bphb-hotspot-block-${cId} .tooltip-reader.two{
-        padding-left:${tooltipone.padding.desktop.left};
-        padding-right:${tooltipone.padding.desktop.right};
-        padding-top:${tooltipone.padding.desktop.top};
-        padding-bottom:${tooltipone.padding.desktop.bottom};
-        border-radius:${tooltipone.borderRadius.desktop.top} ${tooltipone.borderRadius.desktop.left} ${tooltipone.borderRadius.desktop.bottom} ${tooltipone.borderRadius.desktop.right};
-      }
-      #bphb-hotspot-block-${cId} .tooltip-reader.three{
-        padding-left:${tooltipone.padding.desktop.left};
-        padding-right:${tooltipone.padding.desktop.right};
-        padding-top:${tooltipone.padding.desktop.top};
-        padding-bottom:${tooltipone.padding.desktop.bottom};
-        border-radius:${tooltipone.borderRadius.desktop.top} ${tooltipone.borderRadius.desktop.left} ${tooltipone.borderRadius.desktop.bottom} ${tooltipone.borderRadius.desktop.right};
-      }
-      #bphb-hotspot-block-${cId} .tooltip-reader.fourth{
-        padding-left:${tooltipone.padding.desktop.left};
-        padding-right:${tooltipone.padding.desktop.right};
-        padding-top:${tooltipone.padding.desktop.top};
-        padding-bottom:${tooltipone.padding.desktop.bottom};
-        border-radius:${tooltipone.borderRadius.desktop.top} ${tooltipone.borderRadius.desktop.left} ${tooltipone.borderRadius.desktop.bottom} ${tooltipone.borderRadius.desktop.right};
-      }
-      #bphb-hotspot-block-${cId} .tooltip-reader.fifth{
-        padding-left:${tooltipone.padding.desktop.left};
-        padding-right:${tooltipone.padding.desktop.right};
-        padding-top:${tooltipone.padding.desktop.top};
-        padding-bottom:${tooltipone.padding.desktop.bottom};
-        border-radius:${tooltipone.borderRadius.desktop.top} ${tooltipone.borderRadius.desktop.left} ${tooltipone.borderRadius.desktop.bottom} ${tooltipone.borderRadius.desktop.right};
-      }
-        }
-
       @media (min-width: 768px) and (max-width: 1023px) {
         #bphb-hotspot-block-${cId} .hotspot-image-wrapper{
           padding-left:${image.paddingTablet.left};

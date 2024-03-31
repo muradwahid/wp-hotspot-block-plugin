@@ -1,11 +1,11 @@
 {
   "apiVersion": "1",
-  "name": "bphb/hotspot-block",
+  "name": "b-blocks/hotspot-block",
   "title": "Hotspot Block",
-  "description": "Description of Hotspot Block.",
+  "description": "Hotspot Block allows you to add interactive hotspots to your images.",
   "category": "widgets",
-  "keywords": ["hotspot block"],
-  "textdomain": "hotspot-block",
+  "keywords": ["hotspot block","hotspot","image"],
+  "textdomain": "b-blocks",
   "attributes": {
     "align": {
       "type": "string",
@@ -27,6 +27,23 @@
         "device": "desktop",
         "heightDevice": "desktop",
         "width": { "desktop": "100%", "tablet": "100%", "mobile": "100%" },
+        "padding":{
+          "desktop":{
+          "left": "0px",
+          "right": "0px",
+          "top": "0px",
+          "bottom": "0px"
+        },"tablet":{
+          "left": "0px",
+          "right": "0px",
+          "top": "0px",
+          "bottom": "0px"
+        },"mobile":{
+          "left": "0px",
+          "right": "0px",
+          "top": "0px",
+          "bottom": "0px"
+        }},
         "paddingDesktop": {
           "left": "0px",
           "right": "0px",

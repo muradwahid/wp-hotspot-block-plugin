@@ -27,7 +27,7 @@ import {
 import MediaArea from '../Panel/MediaArea/MediaArea';
 import Presets from '../Panel/Presets/Presets';
 import SpotsItems from '../Panel/SpotsItems/SpotsItems';
-const Settings = ({ attributes, setAttributes,activeIdx,setActiveIdx }) => {
+const Settings = ({ attributes, setAttributes, activeIdx, setActiveIdx }) => {
   // eslint-disable-next-line no-unused-vars
   const { themeone, image, options, preset, spotsone, tooltipone } = attributes;
   const handleAddNewItem = () => {
@@ -48,7 +48,7 @@ const Settings = ({ attributes, setAttributes,activeIdx,setActiveIdx }) => {
   // const spotActive = themeone[activeIdx];
   return (
     <Fragment>
-      <PanelBody initialOpen={true} title={__('Image', 'hotspot-block')}>
+      <PanelBody initialOpen={true} title={__('Image', 'b-blocks')}>
         <MediaArea
           image={image.url || placeholderImg}
           default={{ url: placeholderImg }}
@@ -63,10 +63,11 @@ const Settings = ({ attributes, setAttributes,activeIdx,setActiveIdx }) => {
         />
         <p style={{ marginTop: '20px' }}>Image Size</p>
         <PanelRow>
-          <span>Width</span>
+          <span>{__("Width", "b-blocks")}</span>
           <UnitControl
+            style={{ width: "80px" }}
             value={image.width.desktop}
-            units={['%']}
+            units={[{ label: "%", value: "%" }]}
             min={1}
             max={100}
             onChange={(value) =>
@@ -85,10 +86,11 @@ const Settings = ({ attributes, setAttributes,activeIdx,setActiveIdx }) => {
           />
         </PanelRow>
         <PanelRow>
-          <span>Height</span>
+          <span>{__("Height", "b-blocks")}</span>
           <UnitControl
+            style={{ width: "80px" }}
             value={image.height.desktop}
-            units={['px']}
+            units={[{ label: "px", value: "px" }]}
             onChange={(value) =>
               setAttributes({
                 image: {
@@ -105,7 +107,7 @@ const Settings = ({ attributes, setAttributes,activeIdx,setActiveIdx }) => {
           />
         </PanelRow>
       </PanelBody>
-      <PanelBody initialOpen={false} title={__('Spots', 'hotspot-block')}>
+      <PanelBody initialOpen={false} title={__('Spots', 'b-blocks')}>
         {/* {
           <SpotsItems
             activeIdx={activeIdx}
@@ -157,13 +159,13 @@ const Settings = ({ attributes, setAttributes,activeIdx,setActiveIdx }) => {
             variant="primary"
             icon="plus"
           >
-            Add Item
+            {__("Add Item", "b-blocks")}
           </Button>
         </div>
       </PanelBody>
-      <PanelBody title={__('Options', 'hotspot-block')} initialOpen={false}>
+      <PanelBody title={__('Options', 'b-blocks')} initialOpen={false}>
         <PanelRow>
-          <span>Speed</span>
+          <span>{__("Speed", "b-blocks")}</span>
           <NumberControl
             onChange={(value) =>
               setAttributes({ options: { ...options, speed: value } })
@@ -177,7 +179,7 @@ const Settings = ({ attributes, setAttributes,activeIdx,setActiveIdx }) => {
           />
         </PanelRow>
         <PanelRow>
-          <span>Delay</span>
+          <span>{__("Delay", "b-blocks")}</span>
           <NumberControl
             onChange={(value) =>
               setAttributes({ options: { ...options, delay: value } })
@@ -191,7 +193,7 @@ const Settings = ({ attributes, setAttributes,activeIdx,setActiveIdx }) => {
           />
         </PanelRow>
       </PanelBody>
-      <PanelBody initialOpen={false} title={__('Presets', 'hotspot-block')}>
+      <PanelBody initialOpen={false} title={__('Presets', 'b-blocks')}>
         <span>Design</span>
         <Presets
           value={preset}
@@ -209,22 +211,22 @@ const Settings = ({ attributes, setAttributes,activeIdx,setActiveIdx }) => {
                 value === 1
                   ? defaultTheme
                   : value === 2
-                  ? themeTwo
-                  : value === 3
-                  ? themeThree
-                  : value === 4
-                  ? themeFour
-                  : themeFive,
+                    ? themeTwo
+                    : value === 3
+                      ? themeThree
+                      : value === 4
+                        ? themeFour
+                        : themeFive,
               tooltipone:
                 value === 1
                   ? tooltipOne
                   : value === 2
-                  ? tooltipTwo
-                  : value === 3
-                  ? tooltipThree
-                  : value === 4
-                  ? tooltipFour
-                  : tooltipFive,
+                    ? tooltipTwo
+                    : value === 3
+                      ? tooltipThree
+                      : value === 4
+                        ? tooltipFour
+                        : tooltipFive,
             })
           }
         />
