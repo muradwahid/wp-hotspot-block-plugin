@@ -163,7 +163,7 @@ const Settings = ({ attributes, setAttributes, activeIdx, setActiveIdx }) => {
           </Button>
         </div>
       </PanelBody>
-      <PanelBody title={__('Options', 'b-blocks')} initialOpen={false}>
+      <PanelBody title={__('Tooltip Options', 'b-blocks')} initialOpen={false}>
         <PanelRow>
           <span>{__("Speed", "b-blocks")}</span>
           <NumberControl
