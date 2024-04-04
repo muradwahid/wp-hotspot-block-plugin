@@ -18,11 +18,11 @@ const StyleSettings = ({ attributes, setAttributes }) => {
   const [device, setDevice] = useState("desktop")
   return (
     <Fragment>
-      <PanelBody initialOpen={true} title={__('Image', 'b-blocks')}>
+      <PanelBody initialOpen={true} title={__('Image', 'hotspot-block')}>
         <PanelRow
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <span>{__("Width", "b-blocks")}</span>
+            <span>{__("Width", "hotspot-block")}</span>
             <Device
               device={device}
               onChange={(value) => setDevice(value)}
@@ -46,7 +46,7 @@ const StyleSettings = ({ attributes, setAttributes }) => {
         <PanelRow
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <span>{__("Height", "b-blocks")}</span>
+            <span>{__("Height", "hotspot-block")}</span>
             <Device
               device={device}
               onChange={(value) => setDevice(value)}
@@ -73,7 +73,7 @@ const StyleSettings = ({ attributes, setAttributes }) => {
             onChange={(value) => setDevice(value)}
           />
           <BoxControl
-            label={__("Padding", "b-blocks")}
+            label={__("Padding", "hotspot-block")}
             values={image.padding[device]}
             units={['px']}
             resetValues={{
@@ -90,7 +90,7 @@ const StyleSettings = ({ attributes, setAttributes }) => {
         </div>
         <div className="mt-10">
           <PanelRow>
-            <span>{__("Border Type", "b-blocks")}</span>
+            <span>{__("Border Type", "hotspot-block")}</span>
             <SelectControl
               value={image.border}
               options={[
@@ -120,7 +120,7 @@ const StyleSettings = ({ attributes, setAttributes }) => {
               <div
                 style={{ display: 'flex', alignItems: 'center', gap: '4px' }}
               >
-                <span>{__("Border Width", "b-blocks")}</span>
+                <span>{__("Border Width", "hotspot-block")}</span>
                 <Device
                   device={device}
                   onChange={(value) => setDevice(value)}
@@ -141,7 +141,7 @@ const StyleSettings = ({ attributes, setAttributes }) => {
               />
             </div>
             <PanelColorControl
-              label={__("Border Color", "b-blocks")}
+              label={__("Border Color", "hotspot-block")}
               value={image.borderColor}
               colors={[
                 { name: 'red', color: '#f00' },
@@ -163,7 +163,7 @@ const StyleSettings = ({ attributes, setAttributes }) => {
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-            <span>{__("Border Radius", "b-blocks")}</span>
+            <span>{__("Border Radius", "hotspot-block")}</span>
             <Device
               device={device}
               onChange={(value) => setDevice(value)}
@@ -185,7 +185,7 @@ const StyleSettings = ({ attributes, setAttributes }) => {
         </div>
 
         <PanelShadow
-          label={__("Box Shadow", "b-blocks")}
+          label={__("Box Shadow", "hotspot-block")}
           value={image.boxShadow}
           onChange={(value) =>
             setAttributes({ image: { ...image, boxShadow: value } })

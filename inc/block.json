@@ -4,8 +4,8 @@
   "title": "Hotspot Block",
   "description": "Hotspot Block allows you to add interactive hotspots to your images.",
   "category": "widgets",
-  "keywords": ["hotspot block","hotspot","image"],
-  "textdomain": "b-blocks",
+  "keywords": ["hotspot block", "hotspot", "image"],
+  "textdomain": "hotspot-block",
   "attributes": {
     "align": {
       "type": "string",
@@ -27,23 +27,26 @@
         "device": "desktop",
         "heightDevice": "desktop",
         "width": { "desktop": "100%", "tablet": "100%", "mobile": "100%" },
-        "padding":{
-          "desktop":{
-          "left": "0px",
-          "right": "0px",
-          "top": "0px",
-          "bottom": "0px"
-        },"tablet":{
-          "left": "0px",
-          "right": "0px",
-          "top": "0px",
-          "bottom": "0px"
-        },"mobile":{
-          "left": "0px",
-          "right": "0px",
-          "top": "0px",
-          "bottom": "0px"
-        }},
+        "padding": {
+          "desktop": {
+            "left": "0px",
+            "right": "0px",
+            "top": "0px",
+            "bottom": "0px"
+          },
+          "tablet": {
+            "left": "0px",
+            "right": "0px",
+            "top": "0px",
+            "bottom": "0px"
+          },
+          "mobile": {
+            "left": "0px",
+            "right": "0px",
+            "top": "0px",
+            "bottom": "0px"
+          }
+        },
         "paddingDesktop": {
           "left": "0px",
           "right": "0px",
@@ -70,7 +73,7 @@
         "borderColor": "#ccc",
         "borderWidth": { "desktop": "0px", "tablet": "0px", "mobile": "0px" },
         "borderWidthDevice": "desktop",
-        "boxShadow":"0px 0px 0px 0px #707070"
+        "boxShadow": "0px 0px 0px 0px #707070"
       }
     },
     "options": {
@@ -223,8 +226,8 @@
           },
           "iconColor": "",
           "iconSize": "12px",
-          "spotLink":"",
-          "newWindow":false
+          "spotLink": "",
+          "newWindow": false
         },
         {
           "borderColor": "",
@@ -243,8 +246,8 @@
           },
           "iconColor": "",
           "iconSize": "12px",
-          "spotLink":"",
-          "newWindow":false
+          "spotLink": "",
+          "newWindow": false
         }
       ]
     }

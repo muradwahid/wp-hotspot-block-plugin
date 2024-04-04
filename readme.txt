@@ -9,13 +9,12 @@ Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Description of the Hotspot Block
 
-- Hotspot Block is a WordPress plugin that allows you to add interactive hotspots to your images. Hotspots can be used to provide additional information, links, or actions when users hover over or click on specific areas of an image.
+Hotspot Block is an enabling interactive hotspots on images. Users can access info, links, or actions by hovering or clicking specific areas.
 
 == Description ==
 
-- Hotspot Block is a powerful and versatile wp block that allows you to create interactive and engaging content on your WordPress website. It is suitable for a wide range of use cases, including creating image galleries with additional information. With its user-friendly interface and powerful features, Hotspot Block is the perfect wp block for adding hotspots to your WordPress website.
+Hotspot Block is a powerful and versatile wp block that allows you to create interactive and engaging content on your WordPress website. It is suitable for a wide range of use cases, including creating image galleries with additional information. With its user-friendly interface and powerful features, Hotspot Block is the perfect wp block for adding hotspots to your WordPress website.
 
 
 **[Demos](https://bblockswp.com/demo/block-name)**

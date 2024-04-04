@@ -48,7 +48,7 @@ const Settings = ({ attributes, setAttributes, activeIdx, setActiveIdx }) => {
   // const spotActive = themeone[activeIdx];
   return (
     <Fragment>
-      <PanelBody initialOpen={true} title={__('Image', 'b-blocks')}>
+      <PanelBody initialOpen={true} title={__('Image', 'hotspot-block')}>
         <MediaArea
           image={image.url || placeholderImg}
           default={{ url: placeholderImg }}
@@ -63,7 +63,7 @@ const Settings = ({ attributes, setAttributes, activeIdx, setActiveIdx }) => {
         />
         <p style={{ marginTop: '20px' }}>Image Size</p>
         <PanelRow>
-          <span>{__("Width", "b-blocks")}</span>
+          <span>{__("Width", "hotspot-block")}</span>
           <UnitControl
             style={{ width: "80px" }}
             value={image.width.desktop}
@@ -86,7 +86,7 @@ const Settings = ({ attributes, setAttributes, activeIdx, setActiveIdx }) => {
           />
         </PanelRow>
         <PanelRow>
-          <span>{__("Height", "b-blocks")}</span>
+          <span>{__("Height", "hotspot-block")}</span>
           <UnitControl
             style={{ width: "80px" }}
             value={image.height.desktop}
@@ -107,7 +107,7 @@ const Settings = ({ attributes, setAttributes, activeIdx, setActiveIdx }) => {
           />
         </PanelRow>
       </PanelBody>
-      <PanelBody initialOpen={false} title={__('Spots', 'b-blocks')}>
+      <PanelBody initialOpen={false} title={__('Spots', 'hotspot-block')}>
         {/* {
           <SpotsItems
             activeIdx={activeIdx}
@@ -159,13 +159,13 @@ const Settings = ({ attributes, setAttributes, activeIdx, setActiveIdx }) => {
             variant="primary"
             icon="plus"
           >
-            {__("Add Item", "b-blocks")}
+            {__("Add Item", "hotspot-block")}
           </Button>
         </div>
       </PanelBody>
-      <PanelBody title={__('Tooltip Options', 'b-blocks')} initialOpen={false}>
+      <PanelBody title={__('Tooltip Options', 'hotspot-block')} initialOpen={false}>
         <PanelRow>
-          <span>{__("Speed", "b-blocks")}</span>
+          <span>{__("Speed", "hotspot-block")}</span>
           <NumberControl
             onChange={(value) =>
               setAttributes({ options: { ...options, speed: value } })
@@ -179,7 +179,7 @@ const Settings = ({ attributes, setAttributes, activeIdx, setActiveIdx }) => {
           />
         </PanelRow>
         <PanelRow>
-          <span>{__("Delay", "b-blocks")}</span>
+          <span>{__("Delay", "hotspot-block")}</span>
           <NumberControl
             onChange={(value) =>
               setAttributes({ options: { ...options, delay: value } })
@@ -193,7 +193,7 @@ const Settings = ({ attributes, setAttributes, activeIdx, setActiveIdx }) => {
           />
         </PanelRow>
       </PanelBody>
-      <PanelBody initialOpen={false} title={__('Presets', 'b-blocks')}>
+      <PanelBody initialOpen={false} title={__('Presets', 'hotspot-block')}>
         <span>Design</span>
         <Presets
           value={preset}

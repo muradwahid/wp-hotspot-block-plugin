@@ -18,10 +18,10 @@ const StyleSettingsOne = ({ setAttributes, attributes }) => {
   const [device, setDevice] = useState("desktop");
   return (
     <Fragment>
-      <PanelBody initialOpen={false} title={__('Spots', 'b-blocks')}>
+      <PanelBody initialOpen={false} title={__('Spots', 'hotspot-block')}>
         <PanelRow>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <span>{__("Width", "b-blocks")}</span>
+            <span>{__("Width", "hotspot-block")}</span>
             <Device
               device={device}
               onChange={(value) => setDevice(value)}
@@ -43,7 +43,7 @@ const StyleSettingsOne = ({ setAttributes, attributes }) => {
         </PanelRow>
         <PanelRow>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <span>{__("Height", "b-blocks")}</span>
+            <span>{__("Height", "hotspot-block")}</span>
             <Device
               device={device}
               onChange={(value) => setDevice(value)}
@@ -65,7 +65,7 @@ const StyleSettingsOne = ({ setAttributes, attributes }) => {
         </PanelRow>
         <PanelRow>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <span>{__("Icon Size", "b-blocks")}</span>
+            <span>{__("Icon Size", "hotspot-block")}</span>
             <Device
               device={device}
               onChange={(value) => setDevice(value)}
@@ -93,7 +93,7 @@ const StyleSettingsOne = ({ setAttributes, attributes }) => {
             onChange={(value) => setDevice(value)}
           />
           <BoxControl
-            label={__("Padding", "b-blocks")}
+            label={__("Padding", "hotspot-block")}
             values={spotsone.padding[device]}
             units={['px']}
             resetValues={{
@@ -112,7 +112,7 @@ const StyleSettingsOne = ({ setAttributes, attributes }) => {
 
         <div className="mt-10">
           <PanelRow>
-            <span>{__("Border Type", "b-blocks")}</span>
+            <span>{__("Border Type", "hotspot-block")}</span>
             <SelectControl
               value={spotsone.borderType}
               options={[
@@ -142,7 +142,7 @@ const StyleSettingsOne = ({ setAttributes, attributes }) => {
               <div
                 style={{ display: 'flex', alignItems: 'center', gap: '10px' }}
               >
-                <span>{__("Border Width", "b-blocks")}</span>
+                <span>{__("Border Width", "hotspot-block")}</span>
                 <Device
                   device={device}
                   onChange={(value) => setDevice(value)}
@@ -164,7 +164,7 @@ const StyleSettingsOne = ({ setAttributes, attributes }) => {
 
             </div>
             <PanelColorControl
-              label={__("Border Color", "b-blocks")}
+              label={__("Border Color", "hotspot-block")}
               value={spotsone.borderColor}
               colors={[
                 { name: 'red', color: '#f00' },
@@ -185,7 +185,7 @@ const StyleSettingsOne = ({ setAttributes, attributes }) => {
             onChange={(value) => setDevice(value)}
           />
           <BoxControl
-            label={__("Border Radius", "b-blocks")}
+            label={__("Border Radius", "hotspot-block")}
             values={spotsone.borderRadius[device]}
             units={['px']}
             resetValues={{
@@ -294,7 +294,7 @@ const StyleSettingsOne = ({ setAttributes, attributes }) => {
         )}
       </PanelBody>
 
-      <PanelBody initialOpen={false} title={__('Tooltip', 'b-blocks')}>
+      <PanelBody initialOpen={false} title={__('Tooltip', 'hotspot-block')}>
         <div
           style={{
             display: 'flex',
@@ -302,10 +302,10 @@ const StyleSettingsOne = ({ setAttributes, attributes }) => {
             justifyContent: 'space-between',
           }}
         >
-          <span>{__("Width","b-blocks")}</span>
+          <span>{__("Width", "hotspot-block")}</span>
           <UnitControl
             style={{ width: '92px' }}
-            units={[{label:"px",value:"px"}]}
+            units={[{ label: "px", value: "px" }]}
             isUnitSelectTabbable
             value={tooltipone.width}
             min={1}
@@ -324,52 +324,52 @@ const StyleSettingsOne = ({ setAttributes, attributes }) => {
           <Device
             style={{ position: 'absolute', left: '60px' }}
             device={device}
-            onChange={(value) =>setDevice(value)}
+            onChange={(value) => setDevice(value)}
           />
-            <BoxControl
-              label={__("Padding","b-blocks")}
-              values={tooltipone.padding[device]}
-              units={[{ label: "px", value: "px" }]}
-              resetValues={{
-                left: '0px',
-                right: '0px',
-                top: '0px',
-                bottom: '0px',
-              }}
-              onChange={(value) =>
-                setAttributes({
-                  tooltipone: updateData(tooltipone,value,"padding",device)
-                })
-              }
-            />
+          <BoxControl
+            label={__("Padding", "hotspot-block")}
+            values={tooltipone.padding[device]}
+            units={[{ label: "px", value: "px" }]}
+            resetValues={{
+              left: '0px',
+              right: '0px',
+              top: '0px',
+              bottom: '0px',
+            }}
+            onChange={(value) =>
+              setAttributes({
+                tooltipone: updateData(tooltipone, value, "padding", device)
+              })
+            }
+          />
         </div>
 
         <div style={{ position: 'relative', marginTop: '20px' }}>
           <Device
             style={{ position: 'absolute', left: '90px' }}
             device={device}
-            onChange={(value) =>setDevice(value)}
+            onChange={(value) => setDevice(value)}
           />
-            <BoxControl
-              label={__("Border Radius",'b-blocks')}
-              values={tooltipone.borderRadius[device]}
-              units={[{ label: "px", value: "px" }]}
-              resetValues={{
-                left: '0px',
-                right: '0px',
-                top: '0px',
-                bottom: '0px',
-              }}
-              onChange={(value) =>
-                setAttributes({
-                  tooltipone: updateData(tooltipone,value,"borderRadius",device)
-                })
-              }
-            />
+          <BoxControl
+            label={__("Border Radius", 'hotspot-block')}
+            values={tooltipone.borderRadius[device]}
+            units={[{ label: "px", value: "px" }]}
+            resetValues={{
+              left: '0px',
+              right: '0px',
+              top: '0px',
+              bottom: '0px',
+            }}
+            onChange={(value) =>
+              setAttributes({
+                tooltipone: updateData(tooltipone, value, "borderRadius", device)
+              })
+            }
+          />
         </div>
 
         <PanelColorControl
-          label={__("Text Color","b-blocks")}
+          label={__("Text Color", "hotspot-block")}
           value={tooltipone.textColor}
           colors={[
             { name: 'red', color: '#f00' },
@@ -381,7 +381,7 @@ const StyleSettingsOne = ({ setAttributes, attributes }) => {
           }
         />
         <PanelColorControl
-          label={__("Background Color","b-blocks")}
+          label={__("Background Color", "hotspot-block")}
           value={tooltipone.bgColor}
           colors={[
             { name: 'red', color: '#f00' },
@@ -394,7 +394,7 @@ const StyleSettingsOne = ({ setAttributes, attributes }) => {
         />
 
         <PanelShadow
-          label={__("Box Shadow","b-blocks")}
+          label={__("Box Shadow", "hotspot-block")}
           value={tooltipone.boxShadow}
           onChange={(value) =>
             setAttributes({ tooltipone: { ...tooltipone, boxShadow: value } })

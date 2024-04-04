@@ -12,7 +12,7 @@ class BPHBHelloBlock{
 			'render_callback'	=> [$this, 'render']
 		] ); // Register Block
 
-		wp_set_script_translations( 'bphb-hello-editor-script', 'b-blocks', BPHB_DIR_PATH . 'languages' );
+		wp_set_script_translations( 'bphb-hello-editor-script', 'hotspot-block', BPHB_DIR_PATH . 'languages' );
 	}
 
 	function render( $attributes ){
@@ -20,7 +20,7 @@ class BPHBHelloBlock{
 
 		wp_enqueue_style( 'bphb-hello-style' );
 		wp_enqueue_script( 'bphb-hello-script', BPHB_DIR_URL . 'dist/script.js', [ 'react', 'react-dom' ], BPHB_VERSION, true );
-		wp_set_script_translations( 'bphb-hello-script', 'b-blocks', BPHB_DIR_PATH . 'languages' );
+		wp_set_script_translations( 'bphb-hello-script', 'hotspot-block', BPHB_DIR_PATH . 'languages' );
 
 		$className = $className ?? '';
 		$blockClassName = "wp-block-bphb-hello $className align$align";
