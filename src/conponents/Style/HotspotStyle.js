@@ -266,7 +266,7 @@ const HotspotStyle = ({ attributes }) => {
           height: ${image.height.desktop};
           object-fit:cover;
         }
-      @media (min-width: 768px) and (max-width: 1023px) {
+      @media only screen and (min-width:641px) and (max-width: 1024px) {
         #bphb-hotspot-block-${cId} .hotspot-image-wrapper{
           padding-left:${image.paddingTablet.left};
           padding-right:${image.paddingTablet.right};
@@ -382,7 +382,7 @@ const HotspotStyle = ({ attributes }) => {
       }
         }
 
-      @media screen and (max-width: 767px) {
+      @media only screen and (max-width: 640px) {
         #bphb-hotspot-block-${cId} .hotspot-image-wrapper{
           padding-left:${image.paddingMobile.left};
           padding-right:${image.paddingMobile.right};

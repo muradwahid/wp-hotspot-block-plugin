@@ -169,7 +169,8 @@ const HotspotFront = ({ attributes }) => {
                         ></div>
                       </div>
                     )}
-
+                    {
+                      element.image &&
                     <img
                       src={element.image}
                       style={{
@@ -180,6 +181,7 @@ const HotspotFront = ({ attributes }) => {
                       }}
                       alt=""
                     />
+                    }
                   </div>
                 </div>
               </a>

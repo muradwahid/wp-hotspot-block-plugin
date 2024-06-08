@@ -202,8 +202,8 @@ const Draggable = ({
                 ></div>
               </div>
             )}
-
-            <img
+            {
+              element.image && <img
               src={element.image}
               style={{
                 width: '100%',
@@ -213,6 +213,7 @@ const Draggable = ({
               }}
               alt=""
             />
+            }
           </div>
         </div>
       )}
